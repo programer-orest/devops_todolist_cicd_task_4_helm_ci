@@ -103,7 +103,7 @@ jobs:
       uses: azure/setup-helm@v4.2.0
 
 
-    - name: Temlate Helm
+    - name: Template Helm
       run: helm template todoapp ./todoapp/ -f ./todoapp/values.yaml
 
     - name: Lint
