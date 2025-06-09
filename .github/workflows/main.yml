@@ -104,7 +104,7 @@ jobs:
 
 
     - name: Temlate Helm
-      run: helm template todoapp ./todoapp/values.yaml
+      run: helm template todoapp ./todoapp/ -f ./todoapp/values.yaml
 
     - name: Lint
       run: helm lint ./todoapp/
