@@ -6,7 +6,7 @@ on:
   push:
     branches: ["feature"]
   pull_request:
-    branches: ["main"]
+    branches: ["feature"]
 
 env:
   PythonVersion: 3.8
@@ -104,7 +104,7 @@ jobs:
 
 
     - name: Temlate Helm
-      run: helm template todoapp ./todoapp
+      run: helm template todoapp ./todoapp/values.yaml
 
     - name: Lint
       run: helm lint ./todoapp/
